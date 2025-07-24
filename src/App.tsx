@@ -33,10 +33,10 @@ function App() {
   return (
     <div className="max-w-[1920px] w-full">
       <div className="w-full">
-        <div className="flex items-center justify-center w-full py-4 gap-x-4 md:gap-x-8 lg:gap-x-16 flex-wrap">
+        <div className="flex items-center justify-center h-auto w-full py-4 gap-x-4 md:gap-x-8 lg:gap-x-16 flex-wrap">
           <button className="button px-8 py-3" onClick={() => setView("shows")}>Shows</button>
           <button className="button px-8 py-3" onClick={() => setView("music")}>Music</button>
-          <a href="/" className="flex-shrink-0">
+          <a onClick={() => setView("shows")} className="flex-shrink-0 cursor-pointer">
             <img src={logo} className="unifrakturmaguntia-regular w-[700px] h-auto leading-none py-4 drop-shadow-lg" alt="Gorilla Destiny"/>
           </a>
           <button className="button px-8 py-3" onClick={() => setView("gallery")}>Gallery</button>
@@ -45,7 +45,7 @@ function App() {
         <hr className="py-1 w-full" />
       </div>
       
-      <div className="content_container py-2 flex flex-col items-center">
+      <div className="content_container py-4 flex flex-col items-center">
         <LoadContent />
       </div>
 

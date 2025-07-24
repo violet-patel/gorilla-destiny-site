@@ -15,6 +15,17 @@
   filter: drop-shadow(0 0 .75em #ffd56aaa);
 }
 
+.button {
+  background-color: transparent;
+  will-change: filter;
+  transition: filter 300ms;
+  padding: 0.6em 1.2em;
+  font-size: 2.3em;
+  font-weight: 500;
+  font-family: "UnifrakturMaguntia", cursive;
+  cursor: pointer;
+  transition: border-color 0.25s;
+}
 .button:hover {
   filter: drop-shadow(0 0 .75em #fdff6eea)
 }
