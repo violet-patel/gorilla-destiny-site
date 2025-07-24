@@ -1,5 +1,12 @@
 const Shows = () => {
-    return <></>
+    return <>
+        <p>
+            Upcoming Shows
+        </p>
+        <p>
+            Past Shows
+        </p>
+    </>
 }
 
 export default Shows

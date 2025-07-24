@@ -1,4 +1,5 @@
 import bandPhoto from './assets/group.jpg'
+import logo from './assets/logo.png'
 import './App.css'
 import { useState } from 'react';
 import Shows from './components/Shows';
@@ -30,23 +31,28 @@ function App() {
   }
 
   return (
-    <>
-      <div className="header top-0 text-center">
-        <h1 className="unifrakturmaguntia-regular text-[110px] leading-none">
-          Gorilla Destiny
-        </h1>
-        <hr></hr>
-        <div className="button_bar space-x-3 py-2">
-          <button className="button" onClick={() => setView("")}>Home</button>
-          <button className="button" onClick={() => setView("shows")}>Shows</button>
-          <button className="button" onClick={() => setView("contact")}>Contact</button>
+    <div className="max-w-[1920px] w-full">
+      <div className="w-full">
+        <div className="flex items-center justify-center w-full py-4 gap-x-4 md:gap-x-8 lg:gap-x-16 flex-wrap">
+          <button className="button px-8 py-3" onClick={() => setView("shows")}>Shows</button>
+          <button className="button px-8 py-3" onClick={() => setView("music")}>Music</button>
+          <a href="/" className="flex-shrink-0">
+            <img src={logo} className="unifrakturmaguntia-regular w-[700px] h-auto leading-none py-4 drop-shadow-lg" alt="Gorilla Destiny"/>
+          </a>
+          <button className="button px-8 py-3" onClick={() => setView("gallery")}>Gallery</button>
+          <button className="button px-8 py-3" onClick={() => setView("contact")}>Contact</button>
         </div>
+        <hr className="py-1 w-full" />
       </div>
       
       <div className="content_container py-2 flex flex-col items-center">
         <LoadContent />
       </div>
-    </>
+
+      <div className="footer">
+        
+      </div>
+    </div>
   )
 }
 
